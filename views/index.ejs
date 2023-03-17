@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&family=Lato:wght@100&family=Lobster&family=Noto+Sans+Khmer:wght@600&family=Noto+Sans+Symbols+2&family=Orbitron&family=Outfit&family=Pacifico&family=Poppins&family=Rajdhani:wght@300&family=Roboto+Mono:wght@500&family=Shantell+Sans:wght@300&family=Ubuntu:wght@300&display=swap');
+      </style>
+    <script src="https://kit.fontawesome.com/4d02abcf66.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- get bookmarkDetails from localStorage -->
+    
+<div class="video__parent">
+    <div class="xmark" > <i class="fa-solid fa-xmark" onclick="removevideo()"></i></div>
+   
+    <video controls autoplay>
+        <source src="" type="video/mp4"/>
+    </video>
+</div>
+
+    <div class="whole">
+       <div class="connect_main">
+        <div class="connect__navibar">
+            <img src="/assets/logo.svg">
+            <img src="/assets/icon-nav-home.svg" id="imageIcon" onclick="filter(this,0)">
+            <img src="/assets/icon-nav-movies.svg" id="imageIcon" onclick="filter(this,1)">
+            <img src="/assets/icon-nav-tv-series.svg" id="imageIcon" onclick="filter(this,2)">
+            <img src="/assets/icon-nav-bookmark.svg" id="imageIcon" onclick="filter(this,3)">
+        </div>
+       
+        <div class="connect__feed">
+            <div class="header">
+                <img src="assets/icon-search.svg">
+                <input type="text" placeholder="Search for movies or TV series" oninput="searchFilter(this)">
+            </div>
+<div id="feed__div">
+            <h1>Trending</h1>
+
+                <div class="trending__parent">
+                   <%for(let i=0;i<5;i++){%>
+                        <div class="trending">
+                            
+                         <div class="trending__div" style="background-image:url('<%=arr[i].thumbnail.trending.large%>')" >
+
+                           
+                                <button id="bookmark__icon" value='<%=arr[i].title%>' onclick="bookMarkFunction(this)">
+                                   
+                                        <img src="assets/icon-bookmark-empty.svg"/>
+                                    
+                                </button>
+                            
+
+                            <div class="movie__details"> <p><%=arr[i].year%> • <%if(arr[i].category=='Movie'){%>
+                                <img src='/assets/icon-category-movie.svg' class="small__image"/> 
+                          <%}else{%>
+                                <img src='assets/icon-category-tv.svg' class="small__image"/>
+                                <%}%>
+                                <%=arr[i].category%> • <%=arr[i].rating%></p>
+                                <h3><%=arr[i].title%></h3>
+                        </div>
+                        </div>
+                        </div>
+                    <%}%>
+                </div>
+                <h1>Recommended for you</h1>
+
+                <%for(let i=5; i<arr.length;i++){%>
+                <div class="recommnd__Div">
+                    <div class="recommnd__image__div"  style="background-image:url('<%=arr[i].thumbnail.regular.medium%>')">
+
+                      
+                            <button id="bookmark__icon" value='<%=arr[i].title%>' onclick="bookMarkFunction(this)">
+                               
+                                    <img src="assets/icon-bookmark-empty.svg"/>
+                               
+                                
+                            </button>
+                        
+                       
+                        <button class="play__buttton__div" value="<%=i%>" onclick="playVideo(this)"  >
+                            <div class="play__button">
+                               <img src="assets/icon-play.svg" class="playImage"/>
+                            <h3 >Play</h3>
+                            </div>
+                        </button>
+                        </div>
+                        <p>
+                            <%=arr[i].year%> • <%if(arr[i].category=='Movie'){%>
+                            <img src='/assets/icon-category-movie.svg' class="small__icon"/> 
+                      <%}else{%>
+                            <img src='/assets/icon-category-tv.svg' class="small__icon"/>
+                            <%}%>
+                            <%=arr[i].category%> • <%=arr[i].rating%></p>
+                            <h3><%=arr[i].title%></h3>
+                        </div>
+             <%}%>
+             </div>
+          </div>
+    </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

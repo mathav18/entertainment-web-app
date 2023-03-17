@@ -1,0 +1,82 @@
+body,html{
+    width: 100%;
+    height:100%;
+    margin:0;
+    background-color: #10141E;
+    font-family: 'Outfit', sans-serif;
+    
+}
+h1{color: #fff;}
+label{color: #5A698F;}
+p{color:white;text-align: center;}
+span{color:#FC4747;cursor: pointer;}
+
+.whole{
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feed__div{
+    width:40%;
+    height:80%;
+     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+   
+}
+.message__container{
+    width:500px;
+    min-height:420px;
+    height:auto;
+    background-color:#161D2F;
+   border-radius: 20px;
+   padding: 20px 20px 20px 40px;
+   display:flex;
+   flex-direction: column;
+ }
+ .message__container2{
+    width:500px;
+    min-height:420px;
+    height:auto;
+    background-color:#161D2F;
+   border-radius: 20px;
+   padding: 20px 20px 20px 40px;
+   display:flex;
+   flex-direction: column;
+   position: relative;
+   margin-top:-82%;
+   display: none;
+ }
+
+input{
+    width:470px;
+    height:40px;
+    background:none;
+    border: none;
+    border-bottom: 1px solid #5A698F;
+    color:white;
+    margin-top: -20px;
+    
+}
+
+input:focus{
+    outline: none;
+}
+button{
+    height:50px;
+    width:475px;
+    background: #FC4747;
+    border: none;
+    color: white;
+    font-size:25px;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.bookmarked{
+    color:#FC4747;
+}

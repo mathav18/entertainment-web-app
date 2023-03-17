@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&family=Lato:wght@100&family=Lobster&family=Noto+Sans+Khmer:wght@600&family=Noto+Sans+Symbols+2&family=Orbitron&family=Outfit&family=Pacifico&family=Poppins&family=Rajdhani:wght@300&family=Roboto+Mono:wght@500&family=Shantell+Sans:wght@300&family=Ubuntu:wght@300&display=swap');
+      </style>
+    <script src="https://kit.fontawesome.com/4d02abcf66.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="whole">
+        <div class="feed__div">
+            <img src="/assets/logo.svg">
+            <div>
+                <div class="message__container">
+                    <h1>Log In</h1>
+                    <label>Email address</label><br>
+                    <input type="email" id="inpLogin" ><br>
+                    <label>Password</label><br>
+                    <input type="password" id="inpLogin">
+                    <span id="display"></span>
+                    <button onclick="loginAccount()"">Login to your account</button>
+                   
+                    <p>Don’t have an account? <span  id="signUp">Sign Up</span></p>
+                 </div>
+
+
+    <!-- //Sign in div              -->
+    <div class="message__container2">
+        <h1>Sign Up</h1>
+        <label>Email address</label><br>
+        <input type="email" id="inpsignUp"><br>
+        <label>Password</label><br>
+        <input type="password" id="inpsignUp">
+        <label>Repeat password</label><br>
+        <input type="password" id="inpsignUp">
+        <span id="display2"></span>
+        <button onclick="createAccount()">Create an account</button>
+        <p>Already have an account? <span id="login">Log in</span></p>
+     </div>
+            </div>
+          </div>
+
+    </div>
+    <script src="login.js"></script>
+
+</body>
+</html>
